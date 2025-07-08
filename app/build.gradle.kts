@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.pacemaker.ai"
+    namespace = "com.runlearn.ai"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.pacemaker.ai"
+        applicationId = "com.runlearn.ai"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
