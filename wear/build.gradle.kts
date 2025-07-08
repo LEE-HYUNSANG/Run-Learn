@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.pacemaker.ai.wear"
+    namespace = "com.runlearn.ai.wear"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.pacemaker.ai.wear"
+        applicationId = "com.runlearn.ai.wear"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
