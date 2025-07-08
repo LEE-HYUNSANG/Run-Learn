@@ -2,15 +2,15 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("dagger.hilt.android.plugin")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.runlearn.ai.wear"
+    namespace = "com.pacemaker.ai.wear"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.runlearn.ai.wear"
+        applicationId = "com.pacemaker.ai.wear"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
