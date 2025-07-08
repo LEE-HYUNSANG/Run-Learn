@@ -5,12 +5,14 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.pacemaker.ai.ui.community.CommunityScreen
 import com.pacemaker.ai.ui.dashboard.HomeDashboardScreen
-import com.pacemaker.ai.ui.feedback.FeedbackScreen
 import com.pacemaker.ai.ui.onboarding.OnboardingScreen
+import com.pacemaker.ai.ui.session.FeedbackScreen
 import com.pacemaker.ai.ui.session.RunSessionScreen
 import com.pacemaker.ai.ui.session.SessionPreviewScreen
 import com.pacemaker.ai.ui.session.SummaryScreen
+import com.pacemaker.ai.ui.settings.SettingsScreen
 
 sealed class Screen(val route: String) {
     data object Onboarding : Screen("onboarding")
@@ -19,6 +21,8 @@ sealed class Screen(val route: String) {
     data object RunSession : Screen("run_session")
     data object Summary : Screen("summary")
     data object Feedback : Screen("feedback")
+    data object Community : Screen("community")
+    data object Settings : Screen("settings")
 }
 
 @Composable
@@ -45,6 +49,12 @@ fun AppNavGraph(navController: NavHostController) {
         }
         composable(Screen.Feedback.route) {
             FeedbackScreen(onDone = { navController.navigate(Screen.Dashboard.route) })
+        }
+        composable(Screen.Community.route) {
+            CommunityScreen()
+        }
+        composable(Screen.Settings.route) {
+            SettingsScreen()
         }
     }
 }
