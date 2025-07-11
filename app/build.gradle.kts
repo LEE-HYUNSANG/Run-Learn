@@ -9,6 +9,11 @@ android {
     namespace = "com.runlearn.ai"
     compileSdk = 34
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
     defaultConfig {
         applicationId = "com.runlearn.ai"
         minSdk = 26
@@ -53,4 +58,8 @@ dependencies {
 
 kapt {
     correctErrorTypes = true
+}
+
+kotlin {
+    jvmToolchain(21)
 }
